@@ -30,15 +30,6 @@ resource "azurerm_key_vault" "kv" {
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
   sku_name            = "standard"
-
-  #access_policy = {
-  #  tenant_id = data.azurerm_client_config.current.tenant_id
-  #  object_id = azurerm_virtual_machine.vm.identity[0].principal_id
-  #  secret_permissions = [
-  #    "get",
-  #    "list",
-  #  ]
-  #}
 }
 
 resource "azurerm_virtual_network" "vnet" {
@@ -52,7 +43,7 @@ resource "azurerm_subnet" "snet" {
   name                 = "subnet1"
   resource_group_name  = azurerm_resource_group.rg.name
   virtual_network_name = azurerm_virtual_network.vnet.name
-  address_prefixes    = ["10.0.1.0/24"]
+  address_prefixes     = ["10.0.1.0/24"]
 }
 
 resource "azurerm_network_security_group" "nsg" {

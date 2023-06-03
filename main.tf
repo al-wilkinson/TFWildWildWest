@@ -25,9 +25,9 @@ resource "azurerm_resource_group" "rg" {
   location = "Australia East"
 }
 
-resource "azurerm_key_vault" "kv" {
-  name                = "alwkvt133515"
+resource "azurerm_virtual_network" "vnet" {
+  name                = "terrastuffVNet"
+  address_space       = ["10.0.0.0/16"]
   resource_group_name = azurerm_resource_group.rg.name
   location            = azurerm_resource_group.rg.location
-  sku_name            = "standard"
 }

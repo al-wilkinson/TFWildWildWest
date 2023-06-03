@@ -7,9 +7,9 @@ terraform {
     }
   }
   cloud {
-    organization = "WildWildWest"
+    organization = "al-wilkinson"
     workspaces {
-      name = "MyWorkspace"
+      name = "WildWildWest"
     }
   }
 }

@@ -94,8 +94,4 @@ resource "azurerm_linux_virtual_machine" "vm" {
     sku       = "20.04-LTS"
     version   = "latest"
   }
-
-  identity {
-    type = "SystemAssigned"
-  }
 }

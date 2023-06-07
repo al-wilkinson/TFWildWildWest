@@ -104,7 +104,7 @@ resource "azurerm_linux_virtual_machine" "vm" {
   admin_username = "adminuser"
   # This is a test, torn down immediately. Don't to this otherwise.
   disable_password_authentication = "false"
-  admin_password = "Howtoprotectthis1?"
+  admin_password                  = "Howtoprotectthis1?"
 
   network_interface_ids = [azurerm_network_interface.vnic.id]
 
